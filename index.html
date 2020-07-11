@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Thomaz Viagem</title>
+        <link rel="stylesheet" href="./style/style.css">
+
+        <script src="https://unpkg.com/feather-icons"></script>
+
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <p>Thomaz</p>
+                <ul>
+                    <li>Home</li>
+                    <li>Pacotes</li>
+                    <li>Serviços</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+
+            <div class="header-content">
+                <h1>Paris</h1>
+                <p>Conheça paris e a beleza da Torre Eiffel</p>
+                <button>Saiba mais</button>
+            </div>
+        </header>
+
+        <section class="pacotes">
+
+            <h1 class="pacotes-title">Conheça nossos pacotes</h1>
+
+            <div class="pacotes-cards">
+
+                <div class="card">
+                    <div class="card-tag card-tag-top">
+                        <p>Promoção</p>
+                    </div>
+
+                    <div class="card-tag card-tag-bottom">
+                        <p>R$ 1250,00</p>
+                    </div>
+                    <img class="card-image" src="https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Miami">
+                    <div class="card-content">
+                        <h1>Pacote 5 noites hotel premium</h1>
+                        <ul>
+                            <li> <i data-feather="coffee"></i> Cafe da manha incluso</li>
+                            <li> <i data-feather="wifi"></i> Wifi</li>
+                            <li> <i data-feather="briefcase"></i> Pet friendly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag card-tag-bottom">
+                        <p>R$ 1500,00</p>
+                    </div>
+                    <img class="card-image" src="./assets/Portugal.jpg" alt="Portugal">
+                    <div class="card-content">
+                        <h1>1 semana em Portugal</h1>
+                        <ul>
+                            <li> <i data-feather="coffee"></i> Cafe da manha incluso</li>
+                            <li> <i data-feather="wifi"></i> Wifi</li>
+                            <li> <i data-feather="briefcase"></i> Pet friendly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag card-tag-top">
+                        <p>Promoção</p>
+                    </div>
+
+                    <div class="card-tag card-tag-bottom">
+                        <p>R$ 2800,00</p>
+                    </div>
+                    <img class="card-image" src="./assets/Suica.jpg" alt="Suiça">
+                    <div class="card-content">
+                        <h1>2 semanas com tudo incluso na Suiça!</h1>
+                        <ul>
+                            <li> <i data-feather="coffee"></i> Cafe da manha incluso</li>
+                            <li> <i data-feather="wifi"></i> Wifi</li>
+                            <li> <i data-feather="briefcase"></i> Pet friendly</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="servicos">
+
+            <h1 class="servicos-title">Serviços</h1>
+            
+            <div class="servicos-cards">
+                <div class="card">
+                    <i data-feather="map"></i>
+                    <div class="card-content">
+                        <h3>Tours guiados</h3>
+                        <p>Os tours são guiados com auxilio de um guia, que além de lhe das informações sobre o passeio, lhe indica os melhores lugares</p>
+                    </div>
+                    <button>Saiba mais</button>
+                </div>
+
+                <div class="card">
+                    <i data-feather="camera"></i>
+                    <div class="card-content">
+                        <h3>Fotografos profiossionais</h3>
+                        <p>Com os melhores profiossionais, eles registram os melhores momentos da sua Viagem, assim voce aproveita sua viagem e suas paisagens</p>
+                    </div>
+                    <button>Saiba mais</button>
+                </div>
+
+                <div class="card">
+                    <i data-feather="navigation"></i>
+                    <div class="card-content">
+                        <h3>Aluguel de veiculos</h3>
+                        <p>Para os clientes que optarem por explorarem sozinhos, oferecemos os serviços de alugem de veiculos, com preços super acessiveis</p>
+                    </div>
+                    <button>Saiba mais</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contato">
+            <div id="map"></div>
+            
+        </section>
+
+        <script>
+            feather.replace();
+
+            function initMap() {
+                // The location of Uluru
+                var uluru = {lat: -25.344, lng: 131.036};
+                // The map, centered at Uluru
+                var map = new google.maps.Map(
+                    document.getElementById('map'), {zoom: 4, center: uluru});
+                // The marker, positioned at Uluru
+                var marker = new google.maps.Marker({position: uluru, map: map});
+            }
+        </script>
+
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+        </script>
+    </body>
+</html>
