@@ -16,22 +16,21 @@
             <nav>
                 <p>Thomaz</p>
                 <ul>
-                    <li>Home</li>
-                    <li>Pacotes</li>
-                    <li>Serviços</li>
-                    <li>Contato</li>
+                    <li><a href="#home">Home</a></li>
+                    <li> <a href="#pacotes">Pacotes</a></li>
+                    <li> <a href="#serviços">Serviços</a></li>
+                    <li> <a href="#contato">Contato</a></li>
                 </ul>
             </nav>
 
-            <div class="header-content">
+            <div id="home" class="header-content">
                 <h1>Paris</h1>
                 <p>Conheça paris e a beleza da Torre Eiffel</p>
                 <button>Saiba mais</button>
             </div>
         </header>
 
-        <section class="pacotes">
-
+        <section id="pacotes" class="pacotes">
             <h1 class="pacotes-title">Conheça nossos pacotes</h1>
 
             <div class="pacotes-cards">
@@ -88,10 +87,48 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-tag card-tag-top">
+                        <p>Promoção</p>
+                    </div>
+
+                    <div class="card-tag card-tag-bottom">
+                        <p>R$ 2800,00</p>
+                    </div>
+                    <img class="card-image" src="./assets/Suica.jpg" alt="Suiça">
+                    <div class="card-content">
+                        <h1>2 semanas com tudo incluso na Suiça!</h1>
+                        <ul>
+                            <li> <i data-feather="coffee"></i> Cafe da manha incluso</li>
+                            <li> <i data-feather="wifi"></i> Wifi</li>
+                            <li> <i data-feather="briefcase"></i> Pet friendly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-tag card-tag-top">
+                        <p>Promoção</p>
+                    </div>
+
+                    <div class="card-tag card-tag-bottom">
+                        <p>R$ 2800,00</p>
+                    </div>
+                    <img class="card-image" src="./assets/Suica.jpg" alt="Suiça">
+                    <div class="card-content">
+                        <h1>2 semanas com tudo incluso na Suiça!</h1>
+                        <ul>
+                            <li> <i data-feather="coffee"></i> Cafe da manha incluso</li>
+                            <li> <i data-feather="wifi"></i> Wifi</li>
+                            <li> <i data-feather="briefcase"></i> Pet friendly</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="servicos">
+        <section id="serviços" class="servicos">
 
             <h1 class="servicos-title">Serviços</h1>
             
@@ -125,13 +162,31 @@
             </div>
         </section>
 
-        <section class="contato">
+        <section id="contato" class="contato">
+            <div class="contato-card">
+                <h1>Entre em contato </h1>
+                <ul>
+                    <li><i data-feather="navigation"></i>Avenida Ulysses Borges de Siqueira, 156</li>
+                    <li><i data-feather="navigation"></i>thomazviagem@contato.com.br</li>
+                    <li><i data-feather="navigation"></i>Whats-app (11) 99999-9999</li>
+                </ul>
+            </div>
             <div id="map"></div>
-            
+
         </section>
 
         <script>
             feather.replace();
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
 
             function initMap() {
                 // The location of Uluru
